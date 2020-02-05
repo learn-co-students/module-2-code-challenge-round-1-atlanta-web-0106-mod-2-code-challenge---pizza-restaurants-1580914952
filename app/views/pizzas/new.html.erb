@@ -1,0 +1,11 @@
+<h1>Create New Pizza</h1>
+
+<%= form_for @pizza do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+<%= f.label :ingredients %>
+<%= f.text_field :ingredients %><br>
+<%= f.collection_select :restaurants, Restaurant.all, :id, :name%>
+
+<%= f.submit %>
+<% end %>
