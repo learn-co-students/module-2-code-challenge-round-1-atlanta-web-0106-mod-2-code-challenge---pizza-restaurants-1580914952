@@ -6,8 +6,5 @@ class Pizza < ApplicationRecord
     validates :ingredients, presence: true
     validates :name, uniqueness: true
 
-    def restaurant=(restaurant)
-        # restaurant = Restaurant.find(params[:restaurant_id])
-        RestaurantPizza.create(pizza_id: self.id, restaurant_id: restaurant.id)
-    end
+  
 end
